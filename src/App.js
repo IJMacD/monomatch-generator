@@ -14,7 +14,7 @@ function App() {
 
   const count = order * order + order + 1;
 
-  const dummy = Array.from({length:order});
+  const cards = Array.from({length:count});
 
   const emojiStartHex = Number.parseInt(emojiStart, 16);
   const emojiStartCodePoint = isNaN(emojiStartHex) ? emojiStart.codePointAt(0) || DEFAULT_EMOJI : emojiStartHex;
@@ -46,33 +46,11 @@ function App() {
         <label>Rotation <input type="checkbox" checked={enableRotation} onChange={e => setEnableRotation(e.target.checked)} /></label>
         <h2>Cards</h2>
       </div>
-      <table>
-        <tbody>
-          {
-            dummy.map((_,i) => (
-              <tr key={i}>
-                {
-                  dummy.map((_,j) => (
-                    <td key={j}>
-                      <Card x={j} y={i} order={order} set={set} />
-                    </td>
-                  ))
-                }
-              </tr>
-            ))
-          }
-          <tr>
-            {
-              dummy.map((_, i) => <td key={i}><Card diagonal={i} order={order} set={set} /></td>)
-            }
-          </tr>
-          <tr>
-            <td>
-              <Card horizontal order={order} set={set} />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div style={{display:"flex",flexWrap:"wrap"}}>
+        {
+          cards.map((_, id) => <Card key={id} id={id} order={order} set={set} />)
+        }
+      </div>
     </div>
   );
 }

@@ -63,9 +63,6 @@
 }
 
 @media print {
-  table, tbody, td, tr {
-    display: inline;
-  }
   .Header {
     display: none;
   }

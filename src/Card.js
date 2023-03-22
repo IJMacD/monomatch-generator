@@ -2,16 +2,19 @@ import React from "react";
 
 /**
  * @param {object} props
- * @param {number} [props.x]
- * @param {number} [props.y]
- * @param {boolean} [props.horizontal]
- * @param {number} [props.diagonal]
+ * @param {number} props.id
  * @param {number} props.order
  * @param {string[]} props.set
  */
-export function Card ({ x, y, horizontal, diagonal, order, set }) {
+export function Card ({ id, order, set }) {
 
-    const SPECIAL = order * order + order;
+    const count = order * order + order + 1;
+
+    const SPECIAL = count - 1;
+
+    // If the card is the very last one then it's the one that joins all the
+    // horizontals.
+    const horizontal = id === count - 1;
 
     if (horizontal)
     {
@@ -26,6 +29,14 @@ export function Card ({ x, y, horizontal, diagonal, order, set }) {
             </div>
         );
     }
+
+    const x = id % order;
+    const y = Math.floor(id / order);
+
+    // If we're in the last row (which is one beyond the order) then
+    // we're actually joining the all the diagonals.
+    // The x value now tells us which diagonal we're doing.
+    const diagonal = y === order ? x : void 0;
 
     if (typeof diagonal === "number")
     {
