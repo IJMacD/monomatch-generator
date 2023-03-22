@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/monomatch-generator/static/css/main.86d83ebd.css",
+    "main.js": "/monomatch-generator/static/js/main.32956866.js",
+    "index.html": "/monomatch-generator/index.html",
+    "main.86d83ebd.css.map": "/monomatch-generator/static/css/main.86d83ebd.css.map",
+    "main.32956866.js.map": "/monomatch-generator/static/js/main.32956866.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86d83ebd.css",
+    "static/js/main.32956866.js"
+  ]
+}
