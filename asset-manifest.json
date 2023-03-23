@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/monomatch-generator/static/css/main.8f30f768.css",
-    "main.js": "/monomatch-generator/static/js/main.9656ff5b.js",
+    "main.css": "/monomatch-generator/static/css/main.0f3b8c3a.css",
+    "main.js": "/monomatch-generator/static/js/main.09d4a1fe.js",
     "index.html": "/monomatch-generator/index.html",
-    "main.8f30f768.css.map": "/monomatch-generator/static/css/main.8f30f768.css.map",
-    "main.9656ff5b.js.map": "/monomatch-generator/static/js/main.9656ff5b.js.map"
+    "main.0f3b8c3a.css.map": "/monomatch-generator/static/css/main.0f3b8c3a.css.map",
+    "main.09d4a1fe.js.map": "/monomatch-generator/static/js/main.09d4a1fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f30f768.css",
-    "static/js/main.9656ff5b.js"
+    "static/css/main.0f3b8c3a.css",
+    "static/js/main.09d4a1fe.js"
   ]
 }
